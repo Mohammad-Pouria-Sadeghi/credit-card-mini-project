@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External CSS and Scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- Title -->
+    <title>Card Input Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Card Container -->
+      <div class="card-container">
+        <div class="circle"></div>
+        <div class="circle-2"></div>
+        <div class="card">
+          <div class="card__header">
+            <img src="./Frame 52.png" alt="Logo" />
+            <p>لوگو</p>
+          </div>
+          <div class="card__body">
+            <span id="card-number-holder-1">_ _ _ _</span>
+            <span id="card-number-holder-2">_ _ _ _</span>
+            <span id="card-number-holder-3">_ _ _ _</span>
+            <span id="card-number-holder-4">_ _ _ _</span>
+          </div>
+          <div class="card__footer">
+            <p>CVV2: <span id="CVV2-holder"></span></p>
+            <p dir="rtl">تاریخ انقضا: <span id="expire-year-holder" dir="ltr">_ _</span>/<span id="expire-month-holder"> _ _</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form action="" class="form">
+        <!-- Card Number Input -->
+        <div class="row">
+          <label for="card-number-1">شماره کارت</label>
+          <div class="input-group" dir="ltr">
+            <input type="text" id="card-number-1" class="caa w20p" maxlength="4" pattern="^\d+$" />
+            <input type="text" id="card-number-2" class="w20p" maxlength="4" pattern="^\d+$" />
+            <input type="text" id="card-number-3" class="w20p" maxlength="4" pattern="^\d+$" />
+            <input type="text" id="card-number-4" class="w20p" maxlength="4" pattern="^\d+$" />
+          </div>
+        </div>
+
+        <!-- Expiration Date Input -->
+        <div class="row">
+          <label for="expire-month">تاریخ انقضا</label>
+          <div class="input-group">
+            <input type="text" id="expire-month" class="w50p" placeholder="ماه" maxlength="2" />
+            <input type="text" id="expire-year" class="w50p" placeholder="سال" maxlength="2" />
+          </div>
+        </div>
+
+        <!-- CVV2 Input -->
+        <div class="row">
+          <label for="CVV2-number">CVV2</label>
+          <div class="input-group">
+            <i class="fa fa-keyboard"></i>
+            <input type="text" id="CVV2-number" class="w100p" maxlength="4" />
+
+            <!-- Secure Keyboard -->
+            <div class="keyboared-wrapper">
+              <i class="fa fa-close"></i>
+              <p class="relative">صفحه کلید امن</p>
+              <div class="card-number">
+                <button class="secure-keybored" type="button">1</button>
+                <button class="secure-keybored" type="button">2</button>
+                <button class="secure-keybored" type="button">3</button>
+                <button class="secure-keybored" type="button">4</button>
+                <button class="secure-keybored" type="button">5</button>
+                <button class="secure-keybored" type="button">6</button>
+                <button class="secure-keybored" type="button">7</button>
+                <button class="secure-keybored" type="button">8</button>
+                <button class="secure-keybored" type="button">9</button>
+                <button type="button" class="eraser"><i class="fa fa-eraser"></i></button>
+                <button type="button" class="secure-keybored number-zero">0</button>
+                <button type="button" class="backspace"><i class="fa fa-backspace"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Input -->
+        <div class="row">
+          <label for="email">ایمیل</label>
+          <div class="input-group">
+            <input type="email" id="email" class="w100p" />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="row">
+          <div class="input-group w100p">
+            <button class="w100p">ذخیره</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
